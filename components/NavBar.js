@@ -8,7 +8,9 @@ const NavBar = () => {
 		<div className='w-full flex items-center  h-20 shadow-2xl shadow-slate-200'>
 			<nav className='flex flex-1 justify-between max-w-6xl mx-auto'>
 				<div className='flex items-center'>
-					<Link href='/'>logo</Link>
+					<Link href='/' className='font-extrabold text-2xl text-blue-900	'>
+						JsEnthusiast
+					</Link>
 				</div>
 				<div className='flex items-center'>
 					<ul className='flex items-center'>
