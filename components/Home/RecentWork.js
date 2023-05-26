@@ -46,7 +46,7 @@ const RecentWork = () => {
 					<ProjectCard
 						title='Netflix Clone'
 						type='Development'
-						techStack='Nodejs, firebase, Reactjs, IMDB API'
+						techStack='Nodejs, firebase, ReactJs, IMDB API'
 						imgUrl='/NetflixDev.png'
 					/>
 				</div>
