@@ -2,17 +2,18 @@ import Link from 'next/link';
 import React from 'react';
 import { FaLinkedinIn, FaGithub, FaTwitter } from 'react-icons/fa';
 import { GrInstagram } from 'react-icons/gr';
+import Button from './Button';
 const NavBar = () => {
 	const iconSize = '1.2rem';
 	return (
 		<div className='w-full flex items-center  h-20 shadow-2xl shadow-slate-200'>
-			<nav className='flex flex-1 justify-between max-w-6xl mx-auto'>
+			<nav className='flex flex-1 justify-between max-w-6xl mx-auto px-4'>
 				<div className='flex items-center'>
 					<Link href='/' className='font-extrabold text-2xl text-blue-900	'>
 						JsEnthusiast
 					</Link>
 				</div>
-				<div className='flex items-center'>
+				<div className='md:flex md:items-center hidden'>
 					<ul className='flex items-center'>
 						<li className='mx-4 font-semibold text-slate-600'>
 							<Link href='/'>Home</Link>
@@ -23,12 +24,13 @@ const NavBar = () => {
 						<li className='mx-4 font-semibold text-slate-600'>
 							<Link href='/contact'>Contact</Link>
 						</li>
-						<button className='mx-4 font-semibold border-2 border-blue-900 text-blue-900 px-6 py-3 rounded-md'>
-							Resume
-						</button>
+						<Button
+							classes='mx-4 font-semibold border-2 border-blue-900 text-blue-900 px-6 py-3 rounded-md'
+							title='Resume'
+						/>
 					</ul>
 				</div>
-				<div className='flex items-center'>
+				<div className='md:flex md:items-center hidden'>
 					<ul className='flex items-center'>
 						<li className='mx-2 text-slate-500'>
 							<Link href=''>

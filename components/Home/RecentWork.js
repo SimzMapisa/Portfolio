@@ -6,14 +6,14 @@ import Image from 'next/image';
 
 const RecentWork = () => {
 	return (
-		<div className='max-w-6xl mx-auto py-20 mb-20 flex'>
-			<div>
+		<div className='max-w-6xl px-4 mx-auto py-10 md:py-20 lg:mb-20 flex flex-col lg:flex-row'>
+			<div className='mb-20 sm:mb-40 lg:mb-0'>
 				<div className='absolute'>
 					<h2 className='text-[148px] uppercase font-extrabold leading-[120px] text-[#f8f8f8] flex flex-col tracking-tighter'>
 						Port <span>folio</span>
 					</h2>
 					<Image
-						className='absolute right-[-80px] bottom-[-180px]'
+						className='absolute right-[-80px] bottom-[-180px] hidden lg:block'
 						src='/arrow1.png'
 						height='200'
 						width='200'
@@ -34,9 +34,9 @@ const RecentWork = () => {
 				</div>
 			</div>
 			<div className='flex flex-col'>
-				<div className='flex'>
+				<div className='flex flex-col  sm:flex-row'>
 					<ProjectCard
-						margin='mr-4'
+						margin='mb-6 sm:mr-4 sm:mb-0'
 						title='Airbnb UI Clone'
 						type='UX/UI Design Project'
 						techStack='Figma, After Effects'
