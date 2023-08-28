@@ -15,7 +15,7 @@ const Hero = () => {
           alt="background design elements"
         />
         <div className="relative px-4 z-10 py-20 lg:py-40 md:grid md:grid-cols-12 max-w-6xl mx-auto">
-          <div className="md:col-span-6 mb-6">
+          <div className=" lg:order-1 md:order-2 md:col-span-12 lg:col-span-6 mb-6">
             <h1 className="text-3xl md:text-4xl lg:text-4xl text-slate-800 font-extrabold pb-4">
               I design and develop good looking websites and apps that actually
               work.
@@ -41,7 +41,7 @@ const Hero = () => {
               My Work
             </Link>
           </div>
-          <div className="flex justify-center md:col-span-6">
+          <div className="flex lg:order-2 md:order-1 justify-center md:col-span-12 lg:col-span-6">
             <Image
               src="/simbarashe-mapisa-hero-img.svg"
               alt="code describing simbas skills"

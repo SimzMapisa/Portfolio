@@ -4,7 +4,7 @@ import React from "react";
 const ServiceCard = ({ title, serviceDescription, iconUrl, margin }) => {
   return (
     <div className={margin}>
-      <div className="hover:bg-slate-white hover:shadow-2xl hover:shadow-slate-300 rounded-lg p-6">
+      <div className="hover:bg-white shadow-lg lg:shadow-none lg:hover:shadow-lg hover:shadow-slate-300 rounded-lg p-6">
         {/* Icon */}
         <Image
           src={iconUrl}

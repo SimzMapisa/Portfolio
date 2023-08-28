@@ -5,7 +5,7 @@ const TechStack = () => {
   return (
     <div className="max-w-6xl mx-auto my-10 py-20 flex flex-col items-center relative">
       <div className="relative">
-        <h4 className="text-9xl font-extrabold uppercase text-[#f8f8f8] absolute -translate-x-1/2 ml-[50%] ">
+        <h4 className="text-7xl md:text-8xl lg:text-9xl font-extrabold uppercase text-slate-100  absolute -translate-x-1/2 ml-[50%] tracking-tighter">
           Skills
         </h4>
       </div>

@@ -1,28 +1,24 @@
+"use client";
+import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import React from "react";
 
 const About = () => {
   return (
-    <div className="relative lg:mt-56">
-      <Image
-        src="/about-me.svg"
+    <div className="relative w-full h-fit">
+      <CldImage
+        src="https://res.cloudinary.com/dr9t25eua/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1692799641/about-me_ngtfch.svg"
         alt="about sibarashe mapisa"
-        width="1024"
-        height="400"
-        className="w-full"
+        width="1378"
+        height="1378"
+        zoom="0.5"
+        className="w-full block h-full"
       />
-      <div className="max-w-6xl mx-auto flex justify-center absolute top-4 lg:top-1/3 left-1/3">
-        {/* <Image
-					className='absolute top-[-500px] left-[-200px] z-0'
-					src='/simba.png'
-					alt='simba mapisa'
-					width='500'
-					height='200'
-				/> */}
-        <div className="w-full lg:w-1/2">
-          <h3 className="text-[150px] uppercase font-extrabold absolute top-[-40px] z-0 text-[#1f172e]">
+      <div className="absolute top-0 h-full lg:py-24">
+        <div className="">
+          {/* <h3 className="text-[150px] uppercase font-extrabold absolute top-[-40px] z-0 text-[#1f172e]">
             Whoami
-          </h3>
+          </h3> */}
           <h4 className="text-slate-100 font-bold text-4xl relative z-10">
             About Me
           </h4>

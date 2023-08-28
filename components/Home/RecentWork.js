@@ -7,9 +7,9 @@ import Image from "next/image";
 const RecentWork = () => {
   return (
     <div className="max-w-6xl px-4 mx-auto py-10 md:py-20 lg:mb-20 flex flex-col lg:flex-row">
-      <div className="mb-20 sm:mb-40 lg:mb-0">
-        <div className="absolute">
-          <h2 className="text-9xl md:text-[148px] uppercase font-extrabold leading-[120px] text-[#f8f8f8] flex flex-col tracking-tighter">
+      <div className="mb-20 md:mb-10 lg:mb-0">
+        <div className="absolute lg:translate-y-0 md:-translate-y-1/4 ml-4">
+          <h2 className="text-7xl md:text-8xl lg:text-9xl uppercase font-extrabold lg:leading-[120px] text-slate-100 flex flex-col tracking-tighter">
             Port <span>folio</span>
           </h2>
           <Image
@@ -20,8 +20,8 @@ const RecentWork = () => {
             alt="arrow pointing to project card"
           />
         </div>
-        <div className="h-full flex flex-col justify-center lg:pr-40">
-          <h3 className="relative z-10 text-2xl lg:text-4xl font-bold pb-4 text-slate-800">
+        <div className="h-full flex flex-col justify-start pt-4 lg:pr-40">
+          <h3 className="relative z-10 text-4xl md:text-5xl lg:text-4xl font-bold pb-4 text-slate-800">
             Some of my work
           </h3>
           <p className="leading-7 relative z-10 tracking-tight font-medium text-slate-500 mt-1 mb-4">
@@ -36,7 +36,7 @@ const RecentWork = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col mt-8">
+      <div className="flex flex-col lg:mt-8">
         <div className="flex flex-col  sm:flex-row">
           <ProjectCard
             margin="mb-6 sm:mr-4 sm:mb-0"
