@@ -12,7 +12,12 @@ const Portfolio = () => {
         under development content will be available as soon as I am done
         developing
       </p>
-      <Image src="/underDevelopment.svg" width="600" height="500" />
+      <Image
+        src="/underDevelopment.svg"
+        width="600"
+        height="500"
+        alt="under construction"
+      />
     </div>
   );
 };
