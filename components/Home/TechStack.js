@@ -13,20 +13,20 @@ const TechStack = () => {
         <h5 className="relative z-10 text-4xl font-extrabold normal-case text-slate-800 mb-4">
           Tech Stack
         </h5>
-        <div className="flex items-center gap-6 max-w-5xl grayscale">
+        <div className="grid grid-cols-2 gap-8 md:flex md:items-center md:gap-6 md:max-w-5xl grayscale">
           <Image
             src="/express-js.svg"
             width="500"
             height="500"
             alt="express js framework"
-            className="w-32"
+            className="w-32 col-span-1"
           />
           <Image
             src="/next-js.svg"
             width="500"
             height="500"
             alt="next js framework"
-            className="w-28"
+            className="w-28 col-span-1"
           />
           <Image
             src="/react.svg"
