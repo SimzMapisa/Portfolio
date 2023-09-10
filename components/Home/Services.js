@@ -6,7 +6,7 @@ const Services = () => {
     <div className="max-w-6xl mx-auto my-20 py-20 flex flex-col lg:flex-row">
       <div className="flex flex-col flex-1 basis-2/5">
         <div className="absolute lg:translate-y-0 md:-translate-y-1/4 ml-4">
-          <h2 className="text-7xl md:text-8xl lg:text-9xl uppercase font-extrabold lg:leading-[120px] text-slate-100 flex flex-col tracking-tighter">
+          <h2 className="text-7xl md:text-8xl lg:text-9xl uppercase font-extrabold lg:leading-[100px] text-slate-100 flex flex-col tracking-tighter">
             Serv <span>ices</span>
           </h2>
         </div>

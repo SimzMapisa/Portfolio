@@ -35,7 +35,7 @@ const Hero = () => {
 						/> */}
 
             <Link
-              className="px-6 py-4 rounded-lg bg-red-800 text-white"
+              className="px-8 py-4 rounded-lg bg-blue-950 text-white"
               href="/portfolio"
             >
               My Work
