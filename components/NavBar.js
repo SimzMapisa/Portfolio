@@ -3,6 +3,8 @@ import React from "react";
 import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import Button from "./Button";
+import Image from "next/image";
+
 const NavBar = () => {
   const iconSize = "1.2rem";
   return (
@@ -10,7 +12,11 @@ const NavBar = () => {
       <nav className="flex flex-1 justify-between max-w-6xl mx-auto px-4">
         <div className="flex items-center">
           <Link href="/" className="font-extrabold text-2xl text-blue-900	">
-            JsEnthusiast
+            <Image
+              src="/images/simbacoderoar-logo.png"
+              width={48}
+              height={48}
+            />
           </Link>
         </div>
         <div className="md:flex md:items-center hidden">
