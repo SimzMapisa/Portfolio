@@ -46,7 +46,7 @@ const NavBar = () => {
           >
             Download Resume{" "}
             <span className="pl-3 text-2xl">
-              <Image src="/images/download.svg" width={20} height={20} />
+              <Image src="/images/Download.svg" width={20} height={20} />
             </span>
           </Link>
         </div>
