@@ -1,68 +1,65 @@
 import React from "react";
-import Portfolio from "./../../app/portfolio/page";
-import Link from "next/link";
 import ProjectCard from "../ProjectCard";
-import Image from "next/image";
+import { data } from "autoprefixer";
+
+const projects = [
+  {
+    title: "E-commerce App",
+    content:
+      "Developed and styled interactive web apps for Apple Music, including the user interface of Apple Music’s embeddable web player widget for in-browser user authorization and full song playback.",
+    techStack: ["React", "TailwindCSS", "Firebase"],
+    imgUrl: "/images/NetflixDev.png",
+  },
+  {
+    title: "E-commerce App",
+    content:
+      "Developed and styled interactive web apps for Apple Music, including the user interface of Apple Music’s embeddable web player widget for in-browser user authorization and full song playback.",
+    techStack: ["React", "TailwindCSS", "Firebase"],
+    imgUrl: "/images/NetflixDev.png",
+  },
+  {
+    title: "E-commerce App",
+    content:
+      "Developed and styled interactive web apps for Apple Music, including the user interface of Apple Music’s embeddable web player widget for in-browser user authorization and full song playback.",
+    techStack: [
+      "React",
+      "TailwindCSS",
+      "Firebase",
+      "Next.js",
+      "Vercel",
+      "MongoDB",
+      "Express",
+      "Node.js",
+    ],
+    imgUrl: "/images/NetflixDev.png",
+  },
+];
 
 const RecentWork = () => {
+  projects.map((project) => {
+    console.log(project);
+  });
   return (
-    <div className="bg-slate-50 py-16">
-      <div className="max-w-6xl px-4 mx-auto py-10 md:py-20 lg:mb-20 flex flex-col lg:flex-row">
-        <div className="mb-20 md:mb-10 lg:mb-0">
-          <div className="absolute lg:translate-y-0 md:-translate-y-1/4 ml-4">
-            <h2 className="text-7xl md:text-8xl lg:text-9xl uppercase font-extrabold lg:leading-[120px] text-slate-100 flex flex-col tracking-tighter">
-              Port <span>folio</span>
-            </h2>
-            <Image
-              className="absolute right-[-80px] bottom-[-180px] hidden lg:block"
-              src="/arrow1.png"
-              height="200"
-              width="200"
-              alt="arrow pointing to project card"
-            />
-          </div>
-          <div className="h-full flex flex-col justify-start pt-4 lg:pr-40">
-            <h3 className="relative z-10 text-4xl md:text-5xl lg:text-4xl font-bold pb-4 text-slate-800">
-              My work
-            </h3>
-            <p className="leading-7 relative z-10 tracking-tight font-medium text-slate-500 mt-1 mb-4">
-              Here are a few projects I have worked on and crafted with love to
-              see more, visit my{" "}
-              <Link
-                href="/portfolio"
-                className="font-bold text-blue-950 underline"
-              >
-                portfolio page.
-              </Link>{" "}
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col lg:mt-8">
-          <div className="flex flex-col  sm:flex-row">
+    <div className="max-w-6xl px-4 mx-auto py-10 md:py-20 lg:mb-20 ">
+      <div className="flex flex-col items-center m-auto max-w-3xl lg:px-40">
+        <h3 className="relative z-10 text-center text-4xl md:text-5xl lg:text-4xl font-extrabold pb-2 text-slate-800">
+          A glimpse of the digital wonders I've woven.
+        </h3>
+        <p className="font-normal text-base text-slate-700 mb-8">
+          Take a peek at a few projects I've passionately crafted.
+        </p>
+      </div>
+      <div className="flex flex-col items-center max-w-4xl mx-auto">
+        {projects.map((project) => {
+          return (
             <ProjectCard
-              margin="mb-6 sm:mr-4 sm:mb-0"
-              title="Airbnb UI Clone"
-              type="UX/UI Design Project"
-              techStack="Figma, After Effects"
-              imgUrl="/airbnb-ui.png"
+              title={project.title}
+              content={project.content}
+              techStack={project.techStack}
+              imgUrl={project.imgUrl}
             />
-
-            <ProjectCard
-              title="Netflix Clone"
-              type="Development"
-              techStack="Nodejs, firebase, ReactJs, IMDB API"
-              imgUrl="/NetflixDev.png"
-            />
-          </div>
-          <div className="mt-4">
-            <Link
-              href="/portfolio"
-              className="flex items-center text-lg text-blue-950 font-bold"
-            >
-              View more <span className="text-5xl pl-4">&#10230;</span>
-            </Link>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </div>
   );
