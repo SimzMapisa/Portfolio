@@ -36,9 +36,6 @@ const projects = [
 ];
 
 const RecentWork = () => {
-  projects.map((project) => {
-    console.log(project);
-  });
   return (
     <div className="max-w-6xl px-4 mx-auto py-10 md:py-20 lg:mb-20 ">
       <div className="flex flex-col items-center m-auto max-w-3xl lg:px-40">
