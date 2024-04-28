@@ -5,10 +5,15 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="relative w-full py-16 min-h-[400px] bg-blue-950">
+    <div className="relative w-full py-16 min-h-[400px] bg-gradient-to-tl from-sky-500 via-indigo-500 to-fuchsia-500">
       <div className="flex flex-col px-4 lg:flex-row lg:px-0 max-w-5xl mx-auto items-center">
         <div className="flex-1 order-2 py-8 lg:order-1 lg:py-0 opacity-50">
-          <Image src="/code.svg" width="296" height="243" />
+          <Image
+            src="/images/coder.svg"
+            width="296"
+            height="243"
+            className="opacity-75"
+          />
         </div>
         <div className="flex-1 order-1 lg:order-2 top-0 h-full lg:py-24 ">
           <div className="">
