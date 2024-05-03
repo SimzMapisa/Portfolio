@@ -11,14 +11,7 @@ const projects = [
     imgUrl: "/images/NetflixDev.png",
   },
   {
-    title: "E-commerce App",
-    content:
-      "Developed and styled interactive web apps for Apple Music, including the user interface of Apple Music’s embeddable web player widget for in-browser user authorization and full song playback.",
-    techStack: ["React", "TailwindCSS", "Firebase"],
-    imgUrl: "/images/NetflixDev.png",
-  },
-  {
-    title: "E-commerce App",
+    title: "Todo App",
     content:
       "Developed and styled interactive web apps for Apple Music, including the user interface of Apple Music’s embeddable web player widget for in-browser user authorization and full song playback.",
     techStack: [
