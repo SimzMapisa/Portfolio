@@ -6,8 +6,9 @@ const Footer = () => {
   return (
     <div className="w-full stick bottom-0">
       <div className="flex max-w-6xl py-4 mx-auto justify-center border-t border-slate-100">
-        <span className="font-bold">JsEnthusiast</span> {year} .All rights
-        reserved.
+        <h5 className="text-base font-medium text-slate-600">
+          SimbaCodeRoar&copy;{year}. All rights reserved.
+        </h5>
       </div>
     </div>
   );
