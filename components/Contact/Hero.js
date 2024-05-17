@@ -26,7 +26,7 @@ const Hero = () => {
           />
         </div>
         <div className="col-span-4 w-full ">
-          <Form classes="absolute right-0 -translate-x-full" />
+          {/* <Form classes="absolute right-0 -translate-x-full" /> */}
         </div>
       </div>
     </div>
