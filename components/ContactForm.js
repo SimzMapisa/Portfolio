@@ -79,8 +79,9 @@ function InputForm() {
   console.log(isAnyCheckboxChecked);
 
   const onSubmit = async (data) => {
+    console.log(data);
     try {
-      const response = await axios.post("/api/send-email", data);
+      const response = await axios.post("/api/contact", data);
       if (response.status === 200) {
         alert("Email sent successfully!");
       }
