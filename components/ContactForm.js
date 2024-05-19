@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import validator from "validator";
+import { useEffect, useRef, useState } from "react";
 
 import { Button } from "../components/ui/button";
 import {
@@ -18,6 +19,7 @@ import { Input } from "../components/ui/input";
 import { Textarea } from "./ui/textarea";
 import { FaPaperPlane } from "react-icons/fa";
 import { Checkbox } from "./ui/checkbox";
+import axios from "axios";
 
 const phoneRegex = new RegExp(
   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
@@ -57,10 +59,36 @@ function InputForm() {
     },
   });
 
-  function onSubmit() {
-    console.log("Form submitted");
-    form.reset();
-  }
+  const [elements, setElements] = useState([]);
+  const parentRef = useRef(null);
+
+  useEffect(() => {
+    const parent = parentRef.current;
+    if (parent) {
+      setElements([...parent.childNodes]);
+    }
+  }, []);
+
+  elements.map((node) => console.log(node.firstChild.type));
+
+  console.log(elements);
+  let isAnyCheckboxChecked = elements.some(
+    (node) => node.type === "checkbox" && node.checked,
+  );
+
+  console.log(isAnyCheckboxChecked);
+
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post("/api/send-email", data);
+      if (response.status === 200) {
+        alert("Email sent successfully!");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send email.");
+    }
+  };
 
   return (
     <div className="flex flex-col items-center justify-center pt-40">
@@ -138,7 +166,7 @@ function InputForm() {
             />
             <div>
               <p>Choose a service that best fits your need.</p>
-              <div className="flex justify-start gap-8 py-4">
+              <div className="flex justify-start gap-8 py-4" ref={parentRef}>
                 <div className="flex items-center space-x-2">
                   <Checkbox id="web design" />
                   <label
