@@ -4,6 +4,8 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     const { firstName, lastName, username, phone, message } = req.body;
 
+    console.log(firstName, lastName, username, phone, message);
+
     // Configure the transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
