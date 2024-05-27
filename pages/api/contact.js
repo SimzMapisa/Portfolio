@@ -19,7 +19,7 @@ export default async function handler(req, res) {
 
     const transporter = nodemailer.createTransport({
       host: "mail.privateemail.com",
-      port: 993,
+      port: 465,
       auth: {
         user: "simba@simbacoderoar.com",
         pass: "atOncemedia2023!",
@@ -28,7 +28,9 @@ export default async function handler(req, res) {
 
     transporter.verify(function (error, success) {
       if (error) {
-        console.log(error.message);
+        console.log("================= This is the error =================");
+        console.log(error);
+        console.log("================= This is the error =================");
       } else {
         console.log("Server is ready to take our messages");
       }
