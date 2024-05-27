@@ -7,18 +7,37 @@ export default async function handler(req, res) {
     console.log(firstName, lastName, username, phone, message);
 
     // Configure the transporter
+    // const transporter = nodemailer.createTransport({
+    //   host: "smtp.gmail.com",
+    //   port: 465,
+    //   secure: true,
+    //   auth: {
+    //     user: "simbadev30@gmail.com",
+    //     pass: "atOncemedia2023!",
+    //   },
+    // });
+
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "mail.privateemail.com",
+      port: 993,
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: "simbacoderoar.com",
+        pass: "atOncemedia2023!",
       },
+    });
+
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error.message);
+      } else {
+        console.log("Server is ready to take our messages");
+      }
     });
 
     // Configure the email options
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: "simbarashemapisa66@gmail.com",
+      from: "simbacoderoar.com",
+      to: "simbdev30@gmail.com",
       subject: `Contact Form Submission from ${firstName} ${lastName}`,
       text: `Name: ${firstName} ${lastName}\nCompany: ${username}\nPhone: ${phone}\nMessage: ${message}`,
     };
