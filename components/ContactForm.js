@@ -84,6 +84,7 @@ function InputForm() {
       const response = await axios.post("/api/contact", data);
       if (response.status === 200) {
         alert("Email sent successfully!");
+        form.reset();
       }
     } catch (error) {
       console.error("Error sending email:", error);
