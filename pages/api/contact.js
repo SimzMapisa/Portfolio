@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       host: "mail.privateemail.com",
       port: 993,
       auth: {
-        user: "simbacoderoar.com",
+        user: "simba@simbacoderoar.com",
         pass: "atOncemedia2023!",
       },
     });
