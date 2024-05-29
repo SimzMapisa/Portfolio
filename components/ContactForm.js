@@ -41,7 +41,7 @@ const FormSchema = z.object({
     .refine(validator.isMobilePhone, {
       message: "phone number must be a valid phone number.",
     }),
-  companyName: z.string().optional(),
+  email: z.string().email({ message: "email must be a valid email." }),
   message: z.string().min(2, {
     message: "message must be at least 2 characters.",
   }),
@@ -54,7 +54,7 @@ function InputForm() {
       firstName: "",
       lastName: "",
       phone: "",
-      companyName: "",
+      email: "",
       message: "",
     },
   });
@@ -68,15 +68,6 @@ function InputForm() {
       setElements([...parent.childNodes]);
     }
   }, []);
-
-  elements.map((node) => console.log(node.firstChild.type));
-
-  console.log(elements);
-  let isAnyCheckboxChecked = elements.some(
-    (node) => node.type === "checkbox" && node.checked,
-  );
-
-  console.log(isAnyCheckboxChecked);
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -142,12 +133,12 @@ function InputForm() {
             </div>
             <FormField
               control={form.control}
-              name="username"
+              name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Company Name</FormLabel>
+                  <FormLabel>Email Address</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g xyz limited (if any)" {...field} />
+                    <Input placeholder="e.g johndoe@test.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
