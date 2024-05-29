@@ -2,21 +2,11 @@ import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { firstName, lastName, username, phone, message } = req.body;
+    const { firstName, lastName, email, phone, message } = req.body;
 
-    console.log(firstName, lastName, username, phone, message);
+    console.log(firstName, lastName, email, phone, message);
 
     // Configure the transporter
-    // const transporter = nodemailer.createTransport({
-    //   host: "smtp.gmail.com",
-    //   port: 465,
-    //   secure: true,
-    //   auth: {
-    //     user: "simbadev30@gmail.com",
-    //     pass: "atOncemedia2023!",
-    //   },
-    // });
-
     const transporter = nodemailer.createTransport({
       host: "mail.privateemail.com",
       port: 465,
@@ -36,12 +26,11 @@ export default async function handler(req, res) {
       }
     });
 
-    // Configure the email options
     const mailOptions = {
-      from: "simbacoderoar.com",
-      to: "simbdev30@gmail.com",
-      subject: `Contact Form Submission from ${firstName} ${lastName}`,
-      text: `Name: ${firstName} ${lastName}\nCompany: ${username}\nPhone: ${phone}\nMessage: ${message}`,
+      from: "simba@simbacoderoar.com",
+      to: "simba@simbacoderoar.com, simbadev30@gmail.com",
+      subject: `Email from contact Form - ${firstName} ${lastName}. `,
+      html: `<h3>It's ${firstName} - contact me on ${phone} </h3><h4>${email}</h4><p>${message}</p>`,
     };
 
     try {
