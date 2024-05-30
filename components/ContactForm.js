@@ -157,7 +157,7 @@ function InputForm() {
                 </FormItem>
               )}
             />
-            <div>
+            {/* <div>
               <p>Choose a service that best fits your need.</p>
               <div className="flex justify-start gap-8 py-4" ref={parentRef}>
                 <div className="flex items-center space-x-2">
@@ -197,7 +197,7 @@ function InputForm() {
                   </label>
                 </div>
               </div>
-            </div>
+            </div> */}
             <FormField
               control={form.control}
               name="message"
